@@ -6,6 +6,6 @@ urlpatterns = [
     path('', index, name="index"),
     path('mail/', mail, name="mail"),
     path('done/', done, name="done"),
-    path('id/<str:id>', id, name='id')
+    path('id/<str:id>', idrl, name='id')
 ]
-print(urlpatterns)
+# print(urlpatterns)

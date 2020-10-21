@@ -18,6 +18,7 @@
   <body class="bg bg-light">
     Welcome
     <form method="POST" action="{% url 'mail:done' %}">
+      {% csrf_token %}
       <h1 id="id" data-id="{{ id }}" name="id">{{ id }}</h1>
       <input type="text" name="mail" email />
       <button class="btn btn-primary" type="submit">Send mail</button>
