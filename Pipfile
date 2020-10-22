@@ -9,6 +9,8 @@ djecrety = "*"
 
 [packages]
 django = "*"
+django-heroku = "*"
+dj-database-url = "*"
 
 [requires]
 python_version = "3.8"
