@@ -8,10 +8,13 @@ def index(request):
 
 
 def mail(request):
-    id = uuid.uuid4()
-    print(request.build_absolute_uri())
-    print(request.get_full_path())
-    return redirect('mail:id', id)
+    if request.method == "POST":
+        id = uuid.uuid4()
+        print(request.build_absolute_uri())
+        print(request.get_full_path())
+        return redirect('mail:id', id)
+    else:
+        return HttpResponse('INVALID METHOD')
 
 
 def id(request, id):
