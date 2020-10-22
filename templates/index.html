@@ -17,7 +17,7 @@
   </head>
   <body class="bg bg-light">
     Welcome
-    <form method="POST" action="{% url 'mail:done' %}">
+    <form method="POST" action="{% url 'mail:mail' %}">
       {% csrf_token %}
       <h1 id="id" data-id="{{ id }}" name="id">{{ id }}</h1>
       <input type="text" name="mail" email />
