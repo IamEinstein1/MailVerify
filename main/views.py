@@ -8,6 +8,19 @@ def index(request):
 
 
 def mail(request):
-    id = create_id()
+    id = uuid.uuid4()
+    print(request.build_absolute_uri())
+    print(request.get_full_path())
+    return redirect('mail:id', id)
 
-    return HttpResponse(f"NEW ID -{id}")
+
+def id(request, id):
+    file = open('id.txt', mode='r')
+    if str(id)+'\n' in file.readlines():
+        file.close()
+        return HttpResponse('EXPIRED')
+    else:
+        file = open("id.txt", mode="a", newline='', encoding='UTF-8')
+        file.write(str(id)+'\n')
+        file.close()
+        return HttpResponse(f'RECIEVED - {id}')

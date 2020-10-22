@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 # Sensitive data
 key.py
+id.txt
 # C extensions
 *.so
 
