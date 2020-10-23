@@ -10,6 +10,7 @@ djecrety = "*"
 [packages]
 django = "*"
 validate-email = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"

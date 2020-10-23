@@ -1,6 +1,5 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render, redirect
-from .id import *
 from .mail import *
 from .db import *
 from .models import *
