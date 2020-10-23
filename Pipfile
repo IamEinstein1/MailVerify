@@ -11,6 +11,7 @@ djecrety = "*"
 django = "*"
 validate-email = "*"
 gunicorn = "*"
+ipykernel = "*"
 
 [requires]
 python_version = "3.8"
