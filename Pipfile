@@ -9,6 +9,7 @@ djecrety = "*"
 
 [packages]
 django = "*"
+validate-email = "*"
 
 [requires]
 python_version = "3.8"
