@@ -4,6 +4,8 @@ from .mail import *
 from .db import *
 from .models import *
 
+import uuid
+
 
 def index(request):
     return render(request, 'main/index.html')
@@ -12,6 +14,7 @@ def index(request):
 def mail(request):
     if request.method == "POST":
         if verifymail(request.POST['mail']):
+            import uuid
             id = uuid.uuid4()
             print(request.build_absolute_uri())
             print(request.get_full_path())
