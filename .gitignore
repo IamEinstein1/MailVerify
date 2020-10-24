@@ -5,6 +5,7 @@ __pycache__/
 # Sensitive data
 key.py
 id.txt
+config.py
 # C extensions
 *.so
 
