@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap");
+
+body {
+  margin: 1rem;
+  font-family: "Lora";
+  background: rgb(197, 243, 228);
+}
+.text-center {
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: underline rgb(255, 231, 199);
+}
