@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>UNDER DEVELOPMENT</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -16,12 +16,6 @@
     </style>
   </head>
   <body class="bg bg-light">
-    Welcome
-    <form method="POST" action="{% url 'mail:done' %}">
-      {% csrf_token %}
-      <h1 id="id" data-id="{{ id }}" name="id">{{ id }}</h1>
-      <input type="text" name="mail" email />
-      <button class="btn btn-primary" type="submit">Send mail</button>
-    </form>
+    <h1 class="text text-primary">This site is currently under DEVELOPMENT</h1>
   </body>
 </html>
