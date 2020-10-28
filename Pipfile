@@ -11,6 +11,7 @@ djecrety = "*"
 django = "*"
 django-heroku = "*"
 dj-database-url = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"
