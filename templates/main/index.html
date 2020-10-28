@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
-  {% block title %}Enter Your mail{% endblock title %}
-  {% block body %}
+{% block title %}Enter Your mail{% endblock title %}
+{% block body %}
+{% load static %}
+  <link rel="stylesheet" href="{% static 'style.css' %}">
   <body class="bg bg-light">
     {% if error %}
     <h2 class="alert alert-danger">{{ error }}</h2>
     {% endif %}
     <form method="POST" action="{% url 'mail:mail' %}">
       {% csrf_token %}
-    <h2 class="text-primary">Welcome</h2>  
+    <h2 id="gh"class="text-primary">Welcome</h2>  
       <input class="form-control" type="email" name="mail"  required/>
       <br>
       <button class="btn btn-primary" type="submit">Send mail</button>
