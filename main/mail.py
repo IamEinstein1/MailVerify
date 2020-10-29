@@ -9,5 +9,4 @@ def verifymail(mail):
 
 def send__mail(mail):
     from django.core.mail import send_mail
-    print(send_mail("VERIFY YOUR ID", "CONTENT", recipient_list=[
-        "vermarishit039@gmail.com "]))
+    from .config import host, mail, password

@@ -1,4 +1,3 @@
-# from datetime import datetime
 from django.shortcuts import render, redirect
 from .mail import *
 from .db import *
@@ -15,7 +14,7 @@ def mail(request):
     check_if_key_is_valid(Id)
     if request.method == "POST":
         if verifymail(request.POST['mail']):
-            # TODO :-> To get the location $)
+            # TODO :-> To get the location for CHECKING THE MAIL
             ip = request.META.get('REMOTE_ADDR', None)
 
             import uuid
@@ -44,8 +43,6 @@ def mail(request):
 def id(request, id):
     check_if_key_is_valid(Id)
     for i in Id.objects.all():
-
-        print(i.unique_id)
         if id in i.unique_id:
             try:
                 global valid
@@ -54,8 +51,6 @@ def id(request, id):
                 valid = False
         elif id not in i.unique_id:
             valid = False
-    print(valid)
-
     if valid == False:
         return render(request, 'main/id.html', context={"id": "Session Expired/ID not valid"})
     else:
