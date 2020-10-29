@@ -1,3 +1,3 @@
-# Django-setUp
+# MailVerify - Verify mails seamlessly 
 
-Django setup template
+This is under development
