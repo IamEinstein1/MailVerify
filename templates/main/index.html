@@ -10,10 +10,15 @@
     <form method="POST" action="{% url 'mail:mail' %}">
       {% csrf_token %}
     <h2 id="gh"class="text-primary">Welcome</h2>  
-      <input class="form-control" type="email" name="mail"  required/>
+      <input class="form-control" type="email" name="mail" placeholder="Email"  required/>
+      <br>
+      <input name="name" class="form-control" type="text" placeholder="Name" required>
+      <br>
+      <input type="text" class="form-control" name="username" placeholder="Username(Optional)" option>
       <br>
       <button class="btn btn-primary" type="submit">Send mail</button>
     </form>
   </body>
 </html>
+
 {% endblock body %}

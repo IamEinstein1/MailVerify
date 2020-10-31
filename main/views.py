@@ -19,7 +19,10 @@ def mail(request):
             id = Id.objects.create()
             id.unique_id = uuid.uuid4()
             id.ip = ip
+            name = request.POST['name']
             mail = request.POST['mail']
+            username = request.POST.get('username')
+
             for item in Id.objects.all():
                 if item.mail == mail:
                     return render(request, 'main/index.html', context={"error": "You have already registered"})
@@ -27,10 +30,12 @@ def mail(request):
                     pass
             try:
                 id.mail = mail
+                id.name = name
+                id.username = username
             except IntegrityError:
                 return render(request, 'main/index.html', context={"error": "You have already registered"})
             id.save()
-            return redirect('mail:sent', id.unique_id)
+            return redirect('mail:sent', id.pk)
         else:
             return render(request, 'main/index.html', context={"error": "Provide a valid mail"})
     else:
@@ -50,11 +55,22 @@ def id(request, id):
             valid = False
     if valid == False:
         return render(request, 'main/id.html', context={"id": "Session Expired/ID not valid"})
-    else:
-        return render(request, 'main/id.html', context={"id": id})
-        # return render(request, 'main/sent.html')
+    elif valid == True:
+        crr_id = Id.objects.get(unique_id=id)
+        user = User.objects.create()
+        user.mail = crr_id.mail
+        user.name = crr_id.name
+        user.username = crr_id.username
+        crr_id.mail_is_real = True
+        crr_id.save()
+        user.save()
+        return render(request, 'main/id.html', context={"id": crr_id})
 
 
-def sent(request, *args):
+def sent(request, pk):
     check_if_key_is_valid(Id)
+    id = Id.objects.get(pk=pk)
+    mail = id.mail
+    from .mail import send__mail
+    send__mail(pk, mail)
     return render(request, 'main/sent.html', context={"id": id})

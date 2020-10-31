@@ -120,14 +120,10 @@ STATICFILES_DIRS = [
     BASE_DIR/"static"
 ]
 # Email Settings
-mod = "dev"
-EMAIL_HOST = "localhost"
-EMAIL_PORT = '1025'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ""
-if mod == "prod":
-    EMAIL_USE_TLS = True
-    EMAIL_USE_SSL = True
-else:
-    EMAIL_USE_TLS = False
-    EMAIL_USE_SSL = False
+mod = "prod"
+# EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = True
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '9b4c1049781f9b'
+EMAIL_HOST_PASSWORD = '407f4156f197b3'
+EMAIL_PORT = '2525'
