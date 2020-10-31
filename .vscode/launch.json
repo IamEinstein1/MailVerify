@@ -1,6 +1,22 @@
 {
   "configurations": [
     {
+      "name": "Python: Django ->  MIGRATE",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}\\manage.py",
+      "args": ["migrate"],
+      "django": true
+    },
+    {
+      "name": "Python: Django -> MIGRATIONS",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}\\manage.py",
+      "args": ["makemigrations"],
+      "django": true
+    },
+    {
       "name": "Python: Django",
       "type": "python",
       "request": "launch",

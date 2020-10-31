@@ -16,7 +16,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -123,5 +122,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+STATICFILES_DIRS = [
+    BASE_DIR/"static"
+]
+# Email Settings
+mod = "prod"
+# EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = True
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '9b4c1049781f9b'
+EMAIL_HOST_PASSWORD = '407f4156f197b3'
+EMAIL_PORT = '2525'

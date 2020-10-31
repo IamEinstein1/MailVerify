@@ -2,20 +2,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UNDER DEVELOPMENT</title>
+    <title>{% block title %}{% endblock title %}</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-    <style>
-      body {
-        padding: 5%;
-      }
-    </style>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <script src="{% static 'index.js' %}"></script>
   </head>
   <body class="bg bg-light">
-    <h1 class="text text-primary">This site is currently under DEVELOPMENT</h1>
+    {% block body %}{% endblock body %}
   </body>
 </html>
