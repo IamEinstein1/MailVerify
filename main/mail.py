@@ -29,7 +29,7 @@ def send__mail(pk, mail):
     <h1>Hey👋, {id.name}</h1>
     <h2>Welcome to MailVerify</h2>
     Kindly click the below link to Confirm your mail
-    <a href="http://127.0.0.1:8000/id/{id.unique_id}" class="btn btn-primary">Verify Mail</a>
+    <a href="https://mail-verify.herokuapp.com/id/{id.unique_id}" class="btn btn-primary">Verify Mail</a>
     </form>
     """
     sender_email = "email1@example.com"
