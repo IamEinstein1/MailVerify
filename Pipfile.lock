@@ -55,11 +55,7 @@
             "index": "pypi",
             "version": "==0.3.1"
         },
-        "djecrety": {
-            "hashes": [
-                "sha256:187a318d26bf318f676525774425f8caba000a15b271123db11a62a844a42409",
-                "sha256:4a546d16b65a4477bb388c7717aa55257a1bf06e08c0a60f8d3cf43fb104d73a"
-            ],
+        
             "index": "pypi",
             "version": "==1.0.13"
         },
