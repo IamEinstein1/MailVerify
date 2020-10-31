@@ -80,7 +80,6 @@ DATABASES = {
     }
 }
 
-# ! uncomment  the line BELOW WHEN DEPLOYING
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
@@ -133,3 +132,4 @@ EMAIL_HOST = 'smtp.mailtrap.io'
 EMAIL_HOST_USER = '9b4c1049781f9b'
 EMAIL_HOST_PASSWORD = '407f4156f197b3'
 EMAIL_PORT = '2525'
+django_heroku.settings(locals())
