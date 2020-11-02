@@ -1,7 +1,8 @@
 # MailVerify - Verify mails seamlessly
 
 Mail Verify is an open-source `Django-Project` that helps you to verify mails.
-[Live Demo](https://mail-verify.herokuapp.com/)
+[Live Demo 1](https://mail-verify.herokuapp.com/)
+[Working Demo](https://bit.ly/2HZ7qUj)
 You can start by cloning the repository or using it as a template.
 
 After cloning follow these steps
