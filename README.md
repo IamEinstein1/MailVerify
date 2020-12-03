@@ -1,5 +1,8 @@
 # MailVerify - Verify mails seamlessly
 
+![Build](https://img.shields.io/github/workflow/status/iameinstein1/MailVerify/Django%20CI)
+![CodeQL](https://img.shields.io/github/workflow/status/iameinstein1/MailVerify/CodeQL)
+
 Mail Verify is an open-source `Django-Project` that helps you to verify mails.
 [Live Demo 1](https://mail-verify.herokuapp.com/)
 [Working Demo](https://bit.ly/2HZ7qUj)
